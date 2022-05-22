@@ -1,0 +1,22 @@
+% Encoding: UTF-8
+
+@Article{Walz2017,
+  author  = {Prof. Dr. Guido Walz},
+  title   = {Bézier, Pierre Etienne},
+  journal = {Spektrum: Lexikon der Mathematik},
+  year    = {2017},
+  url     = {https://www.spektrum.de/lexikon/mathematik/bezier-pierre-etienne/1098},
+}
+
+@Book{Piegl1995,
+  title     = {The NURBS Book},
+  publisher = {Springer},
+  year      = {1995},
+  author    = {Les Piegl, Wayne Tiller},
+}
+
+@Misc{,
+  url = {https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Bezier_grad123.svg/400px-Bezier_grad123.svg.png},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

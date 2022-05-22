@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "b4b443fab0a378c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "885c604a2c0edf88",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Zusammenfassung.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d6a32182c159bd31",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bc4ddf490db7a48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5f9445cda0dac6d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1f3e02e20cbb5fdc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ca44bb095690bc99",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b25fa3cbe53fcdb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b12c8d3551617a8a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Zusammenfassung.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "885c604a2c0edf88",
+  "lastOpenFiles": [
+    "Zusammenfassung.md",
+    "Nurbs Book.md",
+    "RhinoShield.md"
+  ]
+}
