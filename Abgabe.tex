@@ -192,12 +192,12 @@ Eine Lösung dafür wird im folgenden Kapitel dargestellt.
 
 \section{Definition NURBS}
 \label{sec:definitionnurbs}
-\section{B-Splines}
+\subsection{B-Splines}
 \label{sec:bsplines}
 Eine Möglichkeit Oberflächen mathematisch darzustellen ist mit den Bézier-Kurven und den Tensor Produkt Oberflächen gegeben.
 Um diese zu optimieren, wird NURBS verwendet.
 NURBS steht für \emph{non-uniform rational B-splines}.
-Der Begriff \emph{rational}, bzw. auf Deutsch: \emph{geborchen rational} wurde im Abschnitt \ref{sec:bezierkurven} dargestellt. 
+Der Begriff \emph{rational}, bzw. auf Deutsch: \emph{gebrochen rational} wurde im Abschnitt \ref{sec:bezierkurven} dargestellt. 
 Diese Funktionen können eine größere Vielfalt an Kurven darstellen. 
 
 Wenn die deutsche Grammatik herangezogen wird, steht das Hauptwort eines zusammengesetzten Wortes am Schluss, weshalb der nächste zu betrachtende Bereich die \emph{B-Splines} sind. 
@@ -207,9 +207,119 @@ Wenn bei einem TPO ein Kontrollpunkt verändert wird, dann verändert sich an je
 Wenn ein B-Spline aus verschiedenen unabhängigen Kurven aufgebaut ist, dann verändert sich bei einer Kontrollpunktänderung nur lokal die Kurve. 
 Eine kontinuierliche Kurve wird garantiert, indem der letzte Punkt $P_{n}$ der vorhergehenden Kurve gleich dem ersten Punkt $P_{0}$. 
 
+Eine Möglichkeit diese B-Splines darzustellen ist sind \emph{B-Spline Basis Funktionen} (Basisfunktionen). 
+Diese werden im folgenden als rekursive Folge dargestellt.
+Bei einer rekursiven Folge definiert sich ein Element $n$ aus vorangegangenen Elementen $n-k$.
+Dabei ist $k$ eine positive natürliche Zahl mit $k \leq n$.
+
+Die bekannteste rekursive Folge ist vermutlich die Fibonacci folge: $fib(n) = fib(n-1) + fib(n-2)$.
+Dabei muss ein Anker defineirt werden.
+Bei Fibonacci ist es: $fib(0) = fib(1) = 1$.
+
+Die Basisfunktionen können wie folgt definiert werden:
+
+\begin{equation}
+N_{i,p}(u) = \frac{u-u_{i}}{u_{u+i}-u_{i}} * N_{i,p-1}(u) + \frac{u_{i+p+1} - u}{u_{i+p+1} - u_{i+1}} * N_{i+1,p-1}(u)
+\end{equation}
+Dabei ist der Anker für $p = 0$ definiert. 
+\begin{equation}
+N_{i,0}(u) = \Biggl\{ \substack{1 \text{ wenn } u_{i} \leq u_{i+1} \\ 0 \text{ wenn }sonst}\Biggr\}
+\end{equation}
+
+Wenn eine Basisfunktion berechnet wird, dann bildet sich eine Art Dreieck. 
+Dabei ist die Basis des Dreiecks das $i$ und der Grad $p$ ist die Höhe des Dreiecks.
+
+\begin{tabular}{c c c c c}
+ &  & $N_{0,2}(u)$ &  &  \\
+ & $N_{0,1}(u)$ &  & $N_{1,1}(u)$ &  \\
+$N_{0,0}(u)$ &  & $N_{1,0}(u)$ &  & $N_{2,0}(u)$ \\
+\end{tabular}
+
+
+\subsection{Eigenschaften von NURBS}
+Zusammenfassend können NURBS-Kurven mit folgender Gleichung dargestellt werden. 
+Dabei sind $\{P_{i}\}$ die Kontrollpunkte, welche durch die $\{w_{i}\}$ gewichtet werden.
+Die B-Spline Basis-Funktionen sind durch $\{N_{i,p}(u)\}$ definiert.
+
+\begin{equation}
+C(u) = \frac{\sum_{i=0}^{n}N_{i,p}(u)*w_{i}*P_{i}}{\sum_{i=0}^{n}N_{i,p}(u)*w_{i}}
+\end{equation}
+
+Dabei können die gebrochen rationalen Basisfunktionen $R_{i,p}(u)$ herausgenommen werden, sodass darüber einige Eigenschaften abgeleitet werden können.
+
+\begin{equation}
+R_{i,p}(u) = \frac{N_{i,p}(u)*w_{i}}{\sum_{j=0}^{n}N_{j,p}(u)*w_{j}}
+\end{equation}
+\begin{equation}
+C(u) = \sum_{i=0}^{n}R_{i,p}(u)*P_{i}
+\end{equation}
+
+Folgende Eigenschaften lassen sich auf diese gebrochen rationalen Basisfunktionen ableiten:
+
+\subsubsection*{Nichtnegativ}
+Es gilt:
+
+\begin{equation}
+\forall  u \in [0,1],  i,p : R_{i,p}(u) \geq 0
+\end{equation}
+
+Dies leitet sich aus der nichtnegativen Eigenschaft von $\{N_{i}(u)\}$ ab.
+Alle $\{w_{i}\}$ müssen dahingehend immer positiv oder Null sein.
+
+Somit hat jeder Punkt $\{P_{i}\}$ niemals einen abstoßenden Effekt auf die Kurve, solange die Gewichtung nicht negativ ist.
+
+\subsubsection*{Teil eines Ganzes}
+Es gilt:
+\begin{equation}
+\sum_{i=0}^{n}R_{i,p}(u) = 1; u \in [0,1]
+\end{equation}
+
+Im Zusammenhang mit der Nichtnegativität gilt, dass $0 \leq R_{i,p}(u) \leq 1$ gilt.
+
+\subsubsection*{Anfang- und Endpunkt-Gleichheit}
+Es gilt:
+\begin{equation}
+R_{0,p}(0) = R_{n,p}(1) = 1
+\end{equation}
+
+Dadurch werden am Ende die Kontrollpunkte $P_{0}$ und $P_{n}$ durch die Kurve geschnitten.
+Den es gilt für die NURBS-Kurven:
+\begin{equation}
+C(0) = P_{0} ; C(1) = P_{n}
+\end{equation}
+
+In der Modellierung ist es dahingehend sinnvoll, wenn die Anfang- und Endpunkte auch den Anfang und das Ende des Modells darstellen.
+
+\subsubsection*{Lokalität}
+Eine Veränderung ändert immer nur einen fest abgegrenzten Bereich .
+Dadurch ist eine komplexe Modellierung erst möglich.
+Wenn also der Punkt $P_{i}$ oder die Gewichtung dieses Punktes verändert wird, ändert sich die Kurve nur im Bereich $[u_{i}, u_{i-1}]$.
+
+
+\subsubsection*{Ableitungsregeln}
+Es ist möglich, $R_{i,p}(u)$ an dem Knoten $u_{i}$ k-mal abzuleiten, wenn es keine Nullstelle ist.
+Die Variable $k$ ist hierbei die Multiplizität des Knotens $u_{i}$.
+Dadurch ist ein flüssiger Übergang zwischen den unterschiedlichen Knoten-Abschnitten möglich.
+
+Bei einer NURBS Kurve ist es nicht mehr k-mal Ableitbar,  sondern $k-p$ mal ableitbar. 
+Dabei ist $k$ wieder die Multiplizität des Knotens und $p$ der Grad.
+Desto höher der Grad einer NURBS-Kurve ist, desto geringer ist die Kontinuität. 
+
+\subsubsection*{Vereinfachung}
+Wenn die Gewichtungen $\{w_{i}\}$ konstant sind, dann gilt:
+
+\begin{equation}
+R_{i,p}(u) = N_{i,p}(u)
+\end{equation}
+
+Dabei sind $\{N_{i,p}(u)\}$ die B-Spline Basis Funktionen. 
+Somit kann der Rechenaufwand deutlich verringert werden, solange die Gewichtungen gleich sind.
+
+
 
 \section{Modellierung}
 \label{sec:modellierung}
+
 \section{Fazit}
 \label{sec:fazit}
 \section{Anhang}
