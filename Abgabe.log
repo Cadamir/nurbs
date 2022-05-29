@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.10)  27 MAY 2022 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.10)  29 MAY 2022 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -116,42 +116,84 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count187
+\lst@gtempboxa=\box47
+\lst@token=\toks20
+\lst@length=\count188
+\lst@currlwidth=\dimen146
+\lst@column=\count189
+\lst@pos=\count190
+\lst@lostspace=\dimen147
+\lst@width=\dimen148
+\lst@newlines=\count191
+\lst@lineno=\count192
+\lst@maxwidth=\dimen149
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count193
+\lst@skipnumbers=\count194
+\lst@framebox=\box48
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count187
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count195
+\l__pdf_internal_box=\box49
 )
 (./Abgabe.aux)
 \openout1 = `Abgabe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count188
-\scratchdimen=\dimen146
-\scratchbox=\box48
-\nofMPsegments=\count189
-\nofMParguments=\count190
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count191
-\MPscratchDim=\dimen147
-\MPnumerator=\count192
-\makeMPintoPDFobject=\count193
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count196
+\scratchdimen=\dimen150
+\scratchbox=\box50
+\nofMPsegments=\count197
+\nofMParguments=\count198
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen151
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
+\everyMPtoPDFconversion=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -161,13 +203,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+\c@lstlisting=\count268
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -177,94 +220,96 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `Abgabe.toc'.
 
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.6328pt too wide) in paragraph at lines 24--26
+Overfull \hbox (2.6328pt too wide) in paragraph at lines 52--54
 \OT1/cmr/m/n/10.95 rate gezo-gen wer-den: die \OT1/cmr/m/it/10.95 B^^Sezier-Kur
 ven \OT1/cmr/m/n/10.95 und die \OT1/cmr/m/it/10.95 Ten-sor Pro-dukt Oberfl^^?ac
 hen\OT1/cmr/m/n/10.95 .
  []
 
-<./pictures/Bezier_grad123.png, id=15, 401.5pt x 143.53625pt>
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<./pictures/Bezier_grad123.png, id=12, 401.5pt x 143.53625pt>
 File: ./pictures/Bezier_grad123.png Graphic file (type png)
 <use ./pictures/Bezier_grad123.png>
-Package pdftex.def Info: ./pictures/Bezier_grad123.png  used on input line 49.
+Package pdftex.def Info: ./pictures/Bezier_grad123.png  used on input line 77.
 (pdftex.def)             Requested size: 401.49901pt x 143.53589pt.
 
-Overfull \hbox (41.49901pt too wide) in paragraph at lines 49--50
+Overfull \hbox (41.49901pt too wide) in paragraph at lines 77--78
 [][] 
  []
 
 [2 <./pictures/Bezier_grad123.png>]
-Overfull \hbox (19.00433pt too wide) in paragraph at lines 69--73
+Overfull \hbox (19.00433pt too wide) in paragraph at lines 97--101
 []\OT1/cmr/m/n/10.95 Mit diesen Gle-ichun-gen lassen sich viele zwei di-men-sio
 n-ale For-men darstellen.
  []
 
 
-Overfull \hbox (11.35464pt too wide) in paragraph at lines 81--83
+Overfull \hbox (11.35464pt too wide) in paragraph at lines 109--111
 []\OT1/cmr/m/n/10.95 Diese k^^?onnen je-doch keine Kreise, El-lipsen oder Hy-pe
 r-beln ex-akt darstellen.
  []
 
-[3]
-Overfull \hbox (10.09227pt too wide) in paragraph at lines 112--117
+
+Overfull \hbox (10.09227pt too wide) in paragraph at lines 140--145
 []\OT1/cmr/m/n/10.95 Da die Gle-ichung f^^?ur B^^Sezier-Kurven im-mer iden-tisc
 h ist, kann jede m^^?ogliche
  []
 
+[3]
 <./pictures/RationalBezier_mapping.png, id=27, 1027.84pt x 1027.84pt>
 File: ./pictures/RationalBezier_mapping.png Graphic file (type png)
 <use ./pictures/RationalBezier_mapping.png>
 Package pdftex.def Info: ./pictures/RationalBezier_mapping.png  used on input l
-ine 138.
+ine 166.
 (pdftex.def)             Requested size: 251.9989pt x 251.98769pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4] [5 <./pictures/RationalBezier_mapping.png>] [6]
-Overfull \hbox (10.85599pt too wide) in paragraph at lines 215--218
+Overfull \hbox (10.85599pt too wide) in paragraph at lines 243--246
 []\OT1/cmr/m/n/10.95 Die bekan-nteste rekur-sive Folge ist ver-mut-lich die Fi-
 bonacci folge: $\OML/cmm/m/it/10.95 fib\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
 n\OT1/cmr/m/n/10.95 ) =
  []
 
 
-Overfull \hbox (7.03542pt too wide) in paragraph at lines 229--231
+Overfull \hbox (7.03542pt too wide) in paragraph at lines 262--264
 []\OT1/cmr/m/n/10.95 Wenn eine Ba-s-is-funk-tion berech-net wird, dann bildet s
 ich eine Art Dreieck.
  []
 
 
-Overfull \hbox (9.97362pt too wide) in paragraph at lines 240--243
+Overfull \hbox (9.97362pt too wide) in paragraph at lines 278--281
 \OT1/cmr/m/n/10.95 Zusammenfassend k^^?onnen NURBS-Kurven mit fol-gen-der Gle-i
 chung dargestellt
  []
 
 
-Overfull \hbox (1.85785pt too wide) in paragraph at lines 240--243
+Overfull \hbox (1.85785pt too wide) in paragraph at lines 278--281
 \OT1/cmr/m/n/10.95 wer-den. Dabei sind $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.9
 5 P[]\OMS/cmsy/m/n/10.95 g$ \OT1/cmr/m/n/10.95 die Kon-trollpunkte, welche durc
 h die $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 w[]\OMS/cmsy/m/n/10.95 g$ \OT1/
 cmr/m/n/10.95 gewichtet
  []
 
-
-Overfull \hbox (21.64485pt too wide) in paragraph at lines 248--249
+[7]
+Overfull \hbox (21.64485pt too wide) in paragraph at lines 286--287
 []\OT1/cmr/m/n/10.95 Dabei k^^?onnen die ge-brochen ra-tio-nalen Ba-s-is-funk-t
 io-nen $\OML/cmm/m/it/10.95 R[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u\OT1/cm
 r/m/n/10.95 )$ her-ausgenom-
  []
 
-[7]
-Overfull \hbox (10.22192pt too wide) in paragraph at lines 294--297
+[8]
+Overfull \hbox (10.22192pt too wide) in paragraph at lines 332--335
 \OT1/cmr/m/n/10.95 Eine Ver^^?anderung ^^?andert im-mer nur einen fest abge-gre
 n-zten Bere-ich . Dadurch
  []
 
-[8] [9]
-Overfull \hbox (34.8845pt too wide) detected at line 337
+[9]
+Overfull \hbox (34.8845pt too wide) detected at line 375
 \OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u\OT1/cmr/m/n/10.9
 5 ) = (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u\OT1/cmr/m
 /n/10.95 )\OML/cmm/m/it/10.95 ; y\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u\OT1/
@@ -272,34 +317,37 @@ cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; z\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u
 \OT1/cmr/m/n/10.95 )) = [] = []
  []
 
-[10] (./Abgabe.aux) ) 
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+) [10] [11]
+(./Abgabe.aux) ) 
 Here is how much of TeX's memory you used:
- 2322 strings out of 483140
- 30101 string characters out of 5965151
- 259375 words of memory out of 5000000
- 17340 multiletter control sequences out of 15000+600000
- 540396 words of font info for 54 fonts, out of 8000000 for 9000
+ 4582 strings out of 483140
+ 58474 string characters out of 5965151
+ 595372 words of memory out of 5000000
+ 19575 multiletter control sequences out of 15000+600000
+ 541030 words of font info for 57 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 30i,8n,31p,244b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-
-Output written on Abgabe.pdf (10 pages, 239610 bytes).
+ 30i,8n,42p,244b,1817s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Abgabe.pdf (11 pages, 258773 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

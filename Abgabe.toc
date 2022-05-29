@@ -4,8 +4,7 @@
 \contentsline {subsection}{\numberline {2.2}Tensor Produkt Oberflächen}{4}%
 \contentsline {section}{\numberline {3}Definition NURBS}{6}%
 \contentsline {subsection}{\numberline {3.1}B-Splines}{6}%
-\contentsline {subsection}{\numberline {3.2}Eigenschaften von NURBS}{7}%
-\contentsline {section}{\numberline {4}Modellierung}{9}%
-\contentsline {section}{\numberline {5}Fazit}{9}%
-\contentsline {section}{\numberline {6}Anhang}{9}%
-\contentsline {subsection}{\numberline {6.1}Umformung Bézier-Kurven mit $P_{i}^{w}$ auf Bézier-Kurven mit $w_{i}*P_{i}$}{9}%
+\contentsline {subsection}{\numberline {3.2}Eigenschaften von NURBS}{8}%
+\contentsline {section}{\numberline {4}Modellierung}{10}%
+\contentsline {section}{\numberline {5}Fazit}{10}%
+\contentsline {section}{\numberline {6}Anhang}{10}%

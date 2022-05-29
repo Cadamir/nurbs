@@ -1,6 +1,34 @@
 \documentclass[11pt]{article}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amstext}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
  
 \title{NURBS}
 \author{Justin Unger}
@@ -226,6 +254,11 @@ Dabei ist der Anker für $p = 0$ definiert.
 N_{i,0}(u) = \Biggl\{ \substack{1 \text{ wenn } u_{i} \leq u_{i+1} \\ 0 \text{ wenn }sonst}\Biggr\}
 \end{equation}
 
+Dabei wird ein Knotenvektor $U = \{u_{0}, u_{1}, ..., u_{n}\}$ benötigt, welcher die \emph{Step-Funktionen} $N_{i,p}(u)$ ihren nicht-Null-Bereich definiert.
+Dadurch ist die Lokalität möglich.
+Die B-Spline Basisfunktionen können nur in den Bereich eine Wirkung auf die endgültige \emph{B-Spline}-Kurve haben, in welcher sie nicht Null sind. 
+Dadurch ist eine Änderung im Bereich von $u_{i}$ bis $u_{i+1}$ nur durch die Basisfunktionen veränderbar, welche die Funktion $N_{i,0}(u)$ in ihrer Berechnung nutzen.
+
 Wenn eine Basisfunktion berechnet wird, dann bildet sich eine Art Dreieck. 
 Dabei ist die Basis des Dreiecks das $i$ und der Grad $p$ ist die Höhe des Dreiecks.
 
@@ -234,6 +267,11 @@ Dabei ist die Basis des Dreiecks das $i$ und der Grad $p$ ist die Höhe des Drei
  & $N_{0,1}(u)$ &  & $N_{1,1}(u)$ &  \\
 $N_{0,0}(u)$ &  & $N_{1,0}(u)$ &  & $N_{2,0}(u)$ \\
 \end{tabular}
+
+Die Anzahl der Basisfunktionen in jedem Grad nimmt ab, desto höher der Grad wird.
+Somit ist auch nur ein maximaler Grad $p \leq n-1$ möglich.
+Die Anzahl der Knoten im Knotenvektor
+Es sind dabei $n-i$ Basisfunktionen mit dem Grad Null möglich.
 
 
 \subsection{Eigenschaften von NURBS}
@@ -323,7 +361,7 @@ Somit kann der Rechenaufwand deutlich verringert werden, solange die Gewichtunge
 \section{Fazit}
 \label{sec:fazit}
 \section{Anhang}
-\subsection{Umformung Bézier-Kurven mit $P_{i}^{w}$ auf Bézier-Kurven mit $w_{i}*P_{i}$}
+\subsection*{Umformung Bézier-Kurven mit $P_{i}^{w}$ auf Bézier-Kurven mit $w_{i}*P_{i}$}
 \[C^{w}(u) = \sum_{i=0}^{n} B_{i,n} (u) * P^{w}_{i}\]
 \[X(u) = \sum_{i=0}^{n} B_{i,n} (u) * w_{i} * x_{i}\]
 \[Y(u) = \sum_{i=0}^{n} B_{i,n} (u) * w_{i} * y_{i}\]
@@ -335,4 +373,50 @@ Somit kann der Rechenaufwand deutlich verringert werden, solange die Gewichtunge
 \[z(u) = \frac{Z(u)}{W(u)} = \frac{\sum_{i=0}^{n} B_{i,n} (u) * w_{i} * z_{i}}{ \sum_{i=0}^{n} B_{i,n} (u) * w_{i}}\] 
 
 \[C(u) = (x(u), y(u), z(u)) = \frac{\sum_{i=0}^{n} B_{i,n}(u) * w_{i} * (x_{i}, y_{i}, z_{i})}{\sum_{i=0}^{n} B_{i,n}(u) * w_{i}} =  \frac{\sum_{i=0}^{n} B_{i,n}(u) * w_{i} * P_{i}}{\sum_{i=0}^{n} B_{i,n}(u) * w_{i}}\]
+
+\subsection*{B-Spline Basisfunktions Programm}
+
+Mit \emph{jupyter-notebook} wurde das Programm ausgeführt, um die entsprechenden Bilder zu erzeugen. 
+Die Variable $p$ anpassen, um den Grad zu ändern.
+Die Liste $us$ anpassen, um den Knoten-Vektor zu ändern.
+
+\begin{lstlisting}[caption=B-Splines Basisfunktionen, label=bsplineprogramm, language=Python]
+import matplotlib.pyplot as plt
+
+def bsplinebase(i,p,us,u):
+    if p == 0:
+        if u < us[i+1] and u >= us[i]:
+            return 1
+        else:
+            return 0
+    else:
+        try:
+            a = (u - us[i])/(us[i+p] - us[i]) * bsplinebase(i, p-1, us, u)
+        except ZeroDivisionError:
+            a = 0
+        try:
+            b = (us[i+p+1] - u)/(us[i+p+1] - us[i+1]) * bsplinebase(i+1, p-1, us, u)
+        except:
+            b = 0
+        return a+b
+
+us = [0,0,0,1,2,3,4,4,5,5,5]
+p = 5
+
+fig, ax = plt.subplots(ncols=1, figsize=(40, 5))
+
+u = 0
+a = [0]
+xs = [0]
+
+for i in range(0,10-p):
+    while u < max(us)+ .1:
+        xs.append(u)
+        a.append(bsplinebase(i,p,us,u))
+        u += 0.001
+    u = 0
+    ax.plot(xs,a)
+    a = [0]
+    xs = [0]
+\end{lstlisting}
 \end{document}
